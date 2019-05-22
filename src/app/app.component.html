@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="html">
+  <h1>Ashley's <img class="logo" src="../assets/yelp.png" alt=""></h1>
+  <form>
+    <select name="price" [(ngModel)]="searchCriteria.price">
+      <option value="">How much money you wanna spend?</option>
+      <option *ngFor="let o of pricePointOptions" [value]="o.value">{{ o.option }}</option>
+    </select>
+
+    <input type="text" placeholder="City" name="city" [(ngModel)]="searchCriteria.city"/>
+
+    <select name="state" [(ngModel)]="searchCriteria.state">
+      <option value="">State</option>
+      <option *ngFor="let state of states" [value]="state.abbreviation">{{ state.name }}</option>
+    </select>
+
+    <button class="submit-button" (click)="searchSubmit($event)">Submit</button>
+  </form>
+
+  <app-results *ngIf="showResults" [results]="results"></app-results>
+
+</div>

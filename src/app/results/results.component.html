@@ -1,0 +1,26 @@
+<div class="card">
+  <h1>{{ results.name }}</h1>
+  <div><img src="{{ results.image_url }}" /></div>
+  <br>
+  <div class="words">Address:</div>
+  <div class="words">{{results.location.address1}}</div>
+  <div class="words">{{results.location.city}}, {{results.location.state}} {{results.location.zip_code}}</div>
+  <br>
+  <div class="words">Phone: {{ results.display_phone }}</div>
+  <div class="words">Delivery: {{ results.delivery }}</div>
+  <div class="words">Rating: {{ results.rating }}</div>
+  <div *ngIf="results">
+  <h5>
+    <img *ngIf="results.rating === 0" src="../../assets/yelp_stars/web_and_ios/regular/regular_0.png">
+    <img *ngIf="results.rating === 1" src="../../assets/yelp_stars/web_and_ios/regular/regular_1.png">
+    <img *ngIf="results.rating === 1.5" src="../../assets/yelp_stars/web_and_ios/regular/regular_1_half.png">
+    <img *ngIf="results.rating === 2" src="../../assets/yelp_stars/web_and_ios/regular/regular_2.png">
+    <img *ngIf="results.rating === 2.5" src="../../assets/yelp_stars/web_and_ios/regular/regular_2_half.png">
+    <img *ngIf="results.rating === 3" src="../../assets/yelp_stars/web_and_ios/regular/regular_3.png">
+    <img *ngIf="results.rating === 3.5" src="../../assets/yelp_stars/web_and_ios/regular/regular_3_half.png">
+    <img *ngIf="results.rating === 4" src="../../assets/yelp_stars/web_and_ios/regular/regular_4.png">
+    <img *ngIf="results.rating === 4.5" src="../../assets/yelp_stars/web_and_ios/regular/regular_4_half.png">
+    <img *ngIf="results.rating === 5" src="../../assets/yelp_stars/web_and_ios/regular/regular_5.png">
+  </h5>
+</div>
+</div>

@@ -1,0 +1,27 @@
+.html {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: rgb(38, 38, 116);
+    color: white;
+    border-radius: 15pt;
+    padding: 5pt;
+}
+
+.logo {
+    height: 50pt;
+    width: 75pt;
+    margin-top: 15pt;
+}
+
+input {
+    padding: 2pt;
+    margin: 10pt;
+}
+
+select {
+  
+    padding: 5pt;
+    margin: 10pt
+}
